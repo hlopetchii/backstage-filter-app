@@ -57,7 +57,7 @@ export default function FilterPanel({filtersHandler, filterOptions}) {
                         ></Select>
                     </div>
                     <div className={styles.fieldContainer}>
-                        <label>Price min</label>
+                        <label>Price from</label>
                         <input
                             type="number"
                             name="priceFrom"
@@ -68,7 +68,7 @@ export default function FilterPanel({filtersHandler, filterOptions}) {
                         </input>
                     </div>
                     <div className={styles.fieldContainer}>
-                        <label>Price max</label>
+                        <label>Price to</label>
                         <input
                             type="number"
                             name="priceTo"

@@ -57,8 +57,9 @@ export function Products() {
         <>
             {!data && !error && <Loader/>}
             <FilterPanel filtersHandler={filtersHandler} filterOptions={data?.filterOptions} />
+            {data?.products?.length == 0 && <div className={styles.noDataDiv}>No products found</div>}
+
             <div className={styles.productsContainer}>
-                {!data?.products?.length && "No data found"}
                 {error && "Fetch error"}
                 { 
                     data?.products.map(product => (
