@@ -1,0 +1,50 @@
+@mixin filterButtonCommon {
+  @apply font-bold cursor-pointer flex justify-center text-base absolute top-2;
+}
+
+.filterContainer{
+  @apply fixed w-full transition-all duration-500 border border-gray-300 bg-blue-100 p-2 flex flex-col justify-center items-center z-50 overflow-hidden;
+  .filterContent{
+    @apply w-full p-4;
+    label{
+      @apply text-gray-400 font-bold block mb-1 pl-1;
+    }
+    .fieldContainer {
+      @apply m-2;
+    }
+    .currencyInput{
+      @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 w-full p-2.5;
+    }
+    .buttonClear {
+      @apply py-2.5 px-5 mr-2 mb-2 text-base font-bold text-gray-900 bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700;
+    }
+    .buttonApply {
+      @apply text-white bg-blue-700 hover:bg-blue-800 font-bold rounded-full text-base px-5 py-2.5 text-center mr-2 mb-2;
+    }
+  }
+}
+
+.expanded{
+  @apply lg:w-2/6 md:w-3/5 sm:w-4/5 h-full top-0 left-0;
+  .filterButton{
+    @include filterButtonCommon();
+    @apply right-4;
+  }
+  .filterContent{
+    @apply block;
+  }
+}
+
+.collapsed{
+  @apply rounded-3xl hover:bg-blue-200 hover:text-blue-700 top-4 left-4 h-11 w-20 flex justify-center items-center overflow-hidden;
+  .filterButton{
+    @include filterButtonCommon();
+  }
+  .filterContent{
+    @apply hidden;
+  }
+}
+
+.disglobal{
+  @apply w-screen h-screen bg-gray-500 opacity-50 fixed z-40;
+}

@@ -1,0 +1,6 @@
+.loaderContainer {
+  @apply m-auto border flex items-center justify-center h-screen;
+}
+.wheel {
+  @apply mr-2 w-8 h-8 text-gray-200 animate-spin fill-blue-600 ;
+}
